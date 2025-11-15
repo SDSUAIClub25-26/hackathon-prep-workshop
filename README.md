@@ -4,7 +4,9 @@ This workshop was presented on 11/14 as part of the "Hackathon Website Prep" wor
 
 The first part (under /hosts and /servers) is aimed at giving an overview of running LLMs locally via Ollama, creating a chatbot-like UI host via Chainlit, and then integrate custom MCP tools with the Ollama model. An overview of setting this up and running it is provided below. (Credits: Joshua Zindale - whose repo we forked for this)
 
-The second part, which was presented by the App Development Club, overviews web-development and frontend fundamentals through designing a chatbot-like, customizable frontend via TypeScript & Tailwind CSS that builds on top of the first part of the workshop and replaces the Chainlit UI.
+The second part, which was presented by the App Development Club, overviews web-development and frontend fundamentals through designing a chatbot-like, customizable frontend via the Next.js React framework (TypeScript & Tailwind CSS) that builds on top of the first part of the workshop and replaces the Chainlit UI. 
+
+**Note: To view part 2, the web development portion, switch branches to the "App-Dev-Portion" which contains its own README and instructions.**
 
 ## Code Setup for the Workshop - Part #1
 
