@@ -1,12 +1,12 @@
-# Model Context Protocol Workshop
+# Innovate4SDSU Hackathon Prep Workshop
 
-This repository contains code and a slide presentation for a workshop that I gave on July the Twenty-Third, 2025, during the Data Science Fellowship Program at UC Riverside.
+This workshop was presented on 11/14 as part of the "Hackathon Website Prep" workshop, a joint meeting between the ACM, AI Club, and App Development Clubs @SDSU. It is split up into two portions, each of which touch on varying concepts and technologies.
 
-The lecture slides are in `presentation.pdf`.
+The first part (under /hosts and /servers) is aimed at giving an overview of running LLMs locally via Ollama, creating a chatbot-like UI host via Chainlit, and then integrate custom MCP tools with the Ollama model. An overview of setting this up and running it is provided below. (Credits: Joshua Zindale - whose repo we forked for this)
 
-After the lecture, begins the workshop, which will focus on building an MCP server using FastMCP and integrating the server into a provided MCP host.
+The second part, which was presented by the App Development Club, overviews web-development and frontend fundamentals through designing a chatbot-like, customizable frontend via TypeScript & Tailwind CSS that builds on top of the first part of the workshop and replaces the Chainlit UI.
 
-## Code Setup for the Workshop
+## Code Setup for the Workshop - Part #1
 
 Inside `hosts/` are three [chainlit](https://docs.chainlit.io/get-started/overview) apps of differing complexity. While two of these are present only to get an idea of how chainlit works, `hosts/ollama_with_tools.py` integrates Ollama with MCP tools. This is the host to be used for this workshop. It can be run with
 
@@ -39,7 +39,7 @@ uv run mcp run /path/to/python_interpreter.py
 Your LLM should now have the ability to run Python code. Try asking it a computational question.
 
 
-## Your Part of the Workshop
+## An Overview of the "Weather" MCP Server
 
 Create a new MCP server using FastMCP called "Weather". It should have a tool that accesses the following web endpoint to get active weather alerts for California:
 
@@ -53,6 +53,8 @@ To see how to write a FastMCP server, you can refer to the [documentation](https
 To get weather data from the endpoint given above, use the Python `requests` library, which should be installed in the environment if you use [uv](https://docs.astral.sh/uv/guides/install-python/) to run code inside this repository's directory.
 
 `requests.get(url)` allows you get a web response from a `url`. To extract JSON data as a Python dictionary, you can use `dictionary = requests.get(url).json()`. You will need to look at the web endpoint in a browser or within Python to see the structure of the data returned from the endpoint.
+
+This is implemented under servers/weather.py
 
 ## What Is MCP?
 
